@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language playgrounds</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛝</text></svg>" />
+    <style>
+        body {
+            background-color: #020409;
+            color: #e7edf2;
+            font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+            padding: 1rem;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            margin: 0;
+        }
+
+        a {
+            color: #89befa;
+        }
+
+        header,
+        footer {
+            padding: 1rem;
+            text-align: center;
+        }
+
+        header {
+            color: #ee8277;
+        }
+
+        main {
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(40ch, 1fr));
+        }
+
+        article {
+            background-color: #0e1116;
+            border: 1px solid #31363c;
+            padding: 1rem;
+            position: relative;
+        }
+
+        article>*+* {
+            margin-block-start: 1rem;
+            margin-block-end: 0;
+        }
+
+        ul {
+            list-style-type: "- ";
+            padding-inline-start: 2ch;
+        }
+
+        ul li+li {
+            margin-block-start: 0.5rem;
+        }
+
+        ul li * {
+            display: inline-block;
+        }
+
+        ul li *+* {
+            margin-inline-start: 0.5rem;
+        }
+
+        article img {
+            display: inline-block;
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+            width: 2.5em;
+        }
+
+        article h2 {
+            align-items: center;
+            display: flex;
+            gap: 0.5rem;
+            margin: 0;
+        }
+
+        footer {
+            color: #98e491;
+        }
+
+        img.light-bg {
+            background-color: #e7edf2;
+            padding: 0.1em;
+        }
+
+        img.round {
+            border-radius: 50%;
+        }
+
+        .comment {
+            color: #6f7680;
+            font-style: italic;
+        }
+
+        .comment::before {
+            content: '// ';
+        }
+
+        ui-flag {
+            font-size: small;
+            text-decoration: wavy underline #ee8277;
+        }
+
+        ui-flag::before {
+            color: #ee8277;
+            content: "!";
+            font-weight: bold;
+            width: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Language playgrounds</h1>
+    </header>
+    <main>
+        <article id="js">
+            <img src="assets/images/js.png" alt="">
+            <h2>JavaScript</h2>
+            <ul>
+                <li><a href="https://jsplayground.dev">jsplayground.dev</a></li>
+            </ul>
+        </article>
+        <article id="ts">
+            <img src="assets/images/typescript.png" alt="">
+            <h2>TypeScript</h2>
+            <ul>
+                <li><a href="https://www.typescriptlang.org/play">typescriptlang.org/play/</a></li>
+            </ul>
+        </article>
+        <article id="web">
+            <img src="assets/images/browser-duotone.svg" alt="">
+            <h2>Web <span class="comment">HTML/CSS/JS</span></h2>
+            <ul>
+                <li><a href="https://codepen.io/pen/">codepen.io/pen/</a></li>
+                <li><a href="https://jsfiddle.net/">jsfiddle.net</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/play">developer.mozilla.org/en-US/play/</a></li>
+            </ul>
+        </article>
+        <article id="dev-environments">
+            <img src="assets/images/cloud-duotone.svg" alt="">
+            <h2>Dev Environments</h2>
+            <ul>
+                <li><a href="https://codesandbox.io/s/?utm_source=landingpage">codesandbox.io/s/</a></li>
+                <li><a href="https://stackblitz.com/?starters=popular">stackblitz.com</a></li>
+                <li><a href="https://replit.com/site/ide">replit.com</a><ui-flag>Account required</ui-flag></li>
+            </ul>
+        </article>
+        <article id="go">
+            <img src="assets/images/golang.png" alt="">
+            <h2>Go</h2>
+            <ul>
+                <li><a href="https://go.dev/play/">go.dev/play/</a></li>
+            </ul>
+        </article>
+        <article id="rust"><img class="light-bg round" src="assets/images/rust.png" alt="">
+            <h2>Rust</h2>
+            <ul>
+                <li><a href="https://play.rust-lang.org/">play.rust-lang.org</a></li>
+            </ul>
+        </article>
+        <article id="zig">
+            <img src="assets/images/zig.png" alt="">
+            <h2>Zig</h2>
+            <ul>
+                <li><a href="https://zig-play.dev/">zig-play.dev</a></li>
+            </ul>
+        </article>
+    </main>
+    <footer>
+        Maintained by <a href="https://seanmcp.com">seanmcp</a>
+    </footer>
+</body>
+
+</html>
